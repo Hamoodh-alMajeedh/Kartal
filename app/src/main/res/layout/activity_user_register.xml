@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityUserRegister"
+    android:padding="30dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="vcxvxc"/>
+
+        <ImageView
+            android:id="@+id/imgUserRegisterUserprofile"
+            android:layout_marginTop="20dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="vcxvxc"/>
+
+        <ImageView
+            android:id="@+id/imgUserRegisterDrivingLFront"
+            android:layout_marginTop="20dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+
+        <ImageView
+            android:id="@+id/imgUserRegisterDrivingLBack"
+            android:layout_marginTop="20dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+
+        <EditText
+            android:id="@+id/EdtUserRegisterFirstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:elegantTextHeight="true"/>
+
+        <EditText
+            android:id="@+id/EdtUserRegisterLastname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Name"
+            android:elegantTextHeight="true"/>
+
+        <EditText
+            android:id="@+id/EdtUserRegisterPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone"
+            android:elegantTextHeight="true"/>
+
+        <EditText
+            android:id="@+id/EdtUserRegisterEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:elegantTextHeight="true"/>
+
+        <EditText
+            android:id="@+id/EdtUserRegisterAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:elegantTextHeight="true"/>
+
+        <LinearLayout
+            android:id="@+id/LinierUserRegisterDob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of Birth : "/>
+
+            <TextView
+                android:id="@+id/TxvUserRegisterDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=" YYYY - MM - DD "/>
+
+            <ImageView
+                android:id="@+id/ImgUserRegisterDob"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_calendar_month_24"/>
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:elegantTextHeight="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Gender      "
+                android:textSize="20sp"/>
+
+            <RadioButton android:id="@+id/RadioUserRegisterMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10px"
+                android:text="Male"
+                android:checked="false"
+                android:elegantTextHeight="true"/>
+
+            <RadioButton
+                android:id="@+id/RadioUserRegisterFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:checked="false"
+                android:elegantTextHeight="true"/>
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/EdtUserRegisterUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:elegantTextHeight="true"/>
+
+        <EditText
+            android:id="@+id/EdtUserRegisterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:elegantTextHeight="true"/>
+
+        <EditText
+            android:id="@+id/EdtUserRegisterConfirmpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Confirm Password"
+            android:elegantTextHeight="true"/>
+
+
+        <Button
+            android:id="@+id/BtnUserRegisterRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="register"
+            android:elegantTextHeight="true"/>
+
+    </LinearLayout>
+
+</ScrollView>

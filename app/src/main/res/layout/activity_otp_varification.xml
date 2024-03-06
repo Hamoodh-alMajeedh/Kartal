@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityOtpVarification"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/EdtOtpVerificationPhone"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:elegantTextHeight="true"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/BtnOtpVerificationRequestOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:elegantTextHeight="true"
+            android:hint="Submit" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/EdtOtpVerificationOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Otp"
+        android:elegantTextHeight="true"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/BtnOtpVerificationSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Submit"
+        android:elegantTextHeight="true"
+        android:layout_marginBottom="20dp"/>
+
+</LinearLayout>
