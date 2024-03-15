@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        app:cardElevation="15dp"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Rental ID"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Rental Date"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Return Date"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Vehicle Type"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="85dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Vehicle No."
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="110dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Driver ID"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="135dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Amount"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="160dp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="xxxxxx"
+                android:textSize="18dp"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="dd month yyyy"
+                android:textSize="18dp"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="35dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="dd month yyyy"
+                android:textSize="18dp"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="60dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="xxxx"
+                android:textSize="18dp"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="85dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="xxx - xxxx"
+                android:textSize="18dp"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="110dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="xxxxxx"
+                android:textSize="18dp"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="135dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="xxxxx.xx"
+                android:textSize="18dp"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="160dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="195dp"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:text="More Details"
+                android:textAlignment="gravity"
+                android:textColor="#3F51B5"
+                android:textSize="17dp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

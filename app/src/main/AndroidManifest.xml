@@ -18,6 +18,9 @@
         android:theme="@style/Theme.TheKartal"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityLogin"
+            android:exported="false" />
+        <activity
             android:name=".ActivityUserRegister"
             android:exported="false" />
         <activity

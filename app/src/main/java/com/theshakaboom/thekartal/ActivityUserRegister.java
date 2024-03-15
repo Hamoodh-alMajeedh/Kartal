@@ -51,8 +51,9 @@ public class ActivityUserRegister extends AppCompatActivity {
     private ImageView drivingLBackImageView;
     private Button registerButton;
     private LinearLayout DateOfBirth;
+    DbHelper dbHelper;
     Calendar DobDateCalendar;
-    String DobDate, imagePath, SprofileImageView, SdrivingLFrontImageView, SdrivingLBackImageView;
+    String DobDate, imagePath, SprofileImageView, SdrivingLFrontImageView, SdrivingLBackImageView, imageRename = "null.jpg", emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     Bitmap selectedImageBitmap;
     byte[] imageInByte;
     ImageView imageView;
@@ -64,8 +65,6 @@ public class ActivityUserRegister extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_register);
-
-
 
         firstNameEditText = findViewById(R.id.EdtUserRegisterFirstname);
         lastNameEditText = findViewById(R.id.EdtUserRegisterLastname);
@@ -83,6 +82,7 @@ public class ActivityUserRegister extends AppCompatActivity {
         registerButton = findViewById(R.id.BtnUserRegisterRegister);
         DateOfBirth = findViewById(R.id.LinierUserRegisterDob);
 
+        dbHelper = new DbHelper(this);
         DobDateCalendar = Calendar.getInstance();
 
         DateOfBirth.setOnClickListener(new View.OnClickListener() {
@@ -106,6 +106,7 @@ public class ActivityUserRegister extends AppCompatActivity {
                 String username = usernameEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
                 String confirmPassword = confirmPasswordEditText.getText().toString();
+
                 String gender = "";
                 int selectedId = genderRadioGroup.getCheckedRadioButtonId();
                 if (selectedId == R.id.RadioUserRegisterMale) {
@@ -118,8 +119,31 @@ public class ActivityUserRegister extends AppCompatActivity {
                         address.isEmpty() || username.isEmpty() || password.isEmpty() ||
                         confirmPassword.isEmpty() || gender.isEmpty() || DobDate.isEmpty()){
                     Toast.makeText(ActivityUserRegister.this,"Please Fill All the Fields ! ",Toast.LENGTH_LONG).show();
-                } else if (!password.equals(confirmPassword)) {
-                    Toast.makeText(ActivityUserRegister.this,"Password and confirm password didn't match ! ",Toast.LENGTH_LONG).show();
+                } else {
+                    if (password.equals(confirmPassword)){
+                       /* if (dbHelper.checkUsername(username)){
+                            Toast.makeText(ActivityUserRegister.this,"User Already Exist Try another Name !",Toast.LENGTH_LONG).show();
+                            return;
+
+                        }
+                        */
+                        if (!email.matches(emailPattern)){
+                            Toast.makeText(ActivityUserRegister.this,"Enter valid Email !",Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                        if (!android.util.Patterns.PHONE.matcher(phone).matches()){
+                            Toast.makeText(ActivityUserRegister.this,"Enter valid Phone Number  !",Toast.LENGTH_LONG).show();
+                            return;
+                        }
+
+                        boolean registerSuccess = dbHelper.registerNewUser(username, firstName, lastName, phone, email, address, gender, password, SprofileImageView, SdrivingLFrontImageView, SdrivingLBackImageView);
+                        if (registerSuccess)
+                            Toast.makeText(ActivityUserRegister.this,"User Register Successfully ",Toast.LENGTH_LONG).show();
+                        else
+                            Toast.makeText(ActivityUserRegister.this,"User Register Failed ",Toast.LENGTH_LONG).show();
+                    }else {
+                        Toast.makeText(ActivityUserRegister.this,"Password and confirm password didn't match",Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         });
@@ -128,6 +152,7 @@ public class ActivityUserRegister extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 boolean pick = true;
+                imageRename = "profile_image.jpg";
                 if (pick == true) {
                     if (!checkCamaraPermission() && !checkStoragePermission()) {
                         requestCamaraPermission();
@@ -135,7 +160,7 @@ public class ActivityUserRegister extends AppCompatActivity {
                     } else {
                         imageView = findViewById(R.id.imgUserRegisterUserprofile);
                         pickImage();
-                        imagePath = SprofileImageView;
+                         SprofileImageView = imagePath;
                     }
                 } else {
                     if (!checkStoragePermission()){
@@ -143,7 +168,7 @@ public class ActivityUserRegister extends AppCompatActivity {
                     } else {
                         imageView = findViewById(R.id.imgUserRegisterUserprofile);
                         pickImage();
-                        imagePath = SprofileImageView;
+                        SprofileImageView = imagePath;
                     }
                 }
             }
@@ -152,6 +177,7 @@ public class ActivityUserRegister extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 boolean pick = true;
+                imageRename = "driving_l_front_image.jpg";
                 if (pick == true) {
                     if (!checkCamaraPermission() && !checkStoragePermission()) {
                         requestCamaraPermission();
@@ -159,7 +185,7 @@ public class ActivityUserRegister extends AppCompatActivity {
                     } else {
                         imageView = findViewById(R.id.imgUserRegisterDrivingLFront);
                         pickImage();
-                        imagePath = SdrivingLFrontImageView;
+                        SdrivingLFrontImageView = imagePath;
                     }
                 } else {
                     if (!checkStoragePermission()){
@@ -167,7 +193,7 @@ public class ActivityUserRegister extends AppCompatActivity {
                     } else {
                         imageView = findViewById(R.id.imgUserRegisterDrivingLFront);
                         pickImage();
-                        imagePath = SdrivingLFrontImageView;
+                        SdrivingLFrontImageView = imagePath;
                     }
                 }
             }
@@ -177,6 +203,7 @@ public class ActivityUserRegister extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 boolean pick = true;
+                imageRename = "driving_l_back_image.jpg";
                 if (pick == true) {
                     if (!checkCamaraPermission() && !checkStoragePermission()) {
                         requestCamaraPermission();
@@ -184,7 +211,7 @@ public class ActivityUserRegister extends AppCompatActivity {
                     } else {
                         imageView = findViewById(R.id.imgUserRegisterDrivingLBack);
                         pickImage();
-                        imagePath = SdrivingLBackImageView;
+                        SdrivingLBackImageView = imagePath;
                     }
                 } else {
                     if (!checkStoragePermission()){
@@ -192,7 +219,7 @@ public class ActivityUserRegister extends AppCompatActivity {
                     } else {
                         imageView = findViewById(R.id.imgUserRegisterDrivingLBack);
                         pickImage();
-                        imagePath = SdrivingLBackImageView;
+                        SdrivingLBackImageView = imagePath;
                     }
                 }
             }
@@ -229,7 +256,7 @@ public class ActivityUserRegister extends AppCompatActivity {
             });
 
     private String saveImageToInternalStorage(Bitmap bitmap) {
-        File imageFile = new File(getFilesDir(), "profile_image.jpg");
+        File imageFile = new File(getFilesDir(), imageRename);
         OutputStream outputStream = null;
         try {
             outputStream = new FileOutputStream(imageFile);
