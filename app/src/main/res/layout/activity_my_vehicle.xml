@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".my_vehicle">
+    tools:context=".ActivityMyVehicle"
+    android:fitsSystemWindows="true">
 
     <View
         android:id="@+id/top_bar"
@@ -34,52 +35,41 @@
         android:textColor="#FFFFFF"
         android:textSize="30dp" />
 
-    <ListView
-        android:id="@+id/notifications"
-        android:layout_width="wrap_content"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/TbarMyVehicleTab"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/top_bar"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="75dp"/>
+        android:layout_below="@+id/top_bar">
 
-    <ImageView
-        android:id="@+id/home_icon"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="65dp"
-        android:layout_marginBottom="18dp"
-        android:src="@drawable/home_icon" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicles" />
 
-    <ImageView
-        android:id="@+id/activities_icon"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="147dp"
-        android:layout_marginBottom="18dp"
-        android:src="@drawable/activities_icon"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activities" />
 
-    <ImageView
-        android:id="@+id/vehicle_icon"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="147dp"
-        android:layout_marginBottom="18dp"
-        android:src="@drawable/vehicle_icon" />
+    </com.google.android.material.tabs.TabLayout>
 
-    <ImageView
-        android:id="@+id/profileicon"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentEnd="true"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viwpMyVehicleViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/TbarMyVehicleTab"
+        android:layout_above="@+id/bottomNavigation"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="18dp"
-        android:src="@drawable/profileicon" />
+        android:background="@drawable/bottom_baground"
+        app:itemIconSize="25dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav"/>
 
 </RelativeLayout>

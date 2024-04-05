@@ -18,6 +18,54 @@
         android:theme="@style/Theme.TheKartal"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityVehicleFeedback"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAllRentals"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAllUsers"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityDetailedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityVehicle"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityVehicleDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityVehicleRegister"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityMyProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityMyActivities"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityOngoingRent"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityNotifications"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityMyVehicle"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityHome"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityCompletedRent"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityCancelledRent"
+            android:exported="false" />
+        <activity
             android:name=".ActivityLogin"
             android:exported="false" />
         <activity

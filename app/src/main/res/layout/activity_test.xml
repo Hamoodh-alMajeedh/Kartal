@@ -37,5 +37,79 @@
             android:text="Otp Varification"
             android:elegantTextHeight="true"
             android:textColor="@color/white"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/BtnTestHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:elegantTextHeight="true"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/BtnTestMyActivities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Activities"
+            android:elegantTextHeight="true"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/BtnTestVehicleRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Register"
+            android:elegantTextHeight="true"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/BtnTestVehicle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vehicle"
+            android:elegantTextHeight="true"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/BtnTestVehicleDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Details"
+            android:elegantTextHeight="true"
+            android:textColor="@color/white"/>
+
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/BtnTestVehicleAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Admin"
+            android:elegantTextHeight="true"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/BtnTestVehicleMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Main"
+            android:elegantTextHeight="true"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:id="@+id/BtnTestVehicleLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:elegantTextHeight="true"
+            android:textColor="@color/white"/>
+
     </LinearLayout>
 </ScrollView>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/ongoingCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/TxtvCardVehicleFeedbackRentalID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:text="Rental ID : XX - XXXX"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TxtvCardVehicleFeedbackRentalID"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:text="User Name"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/TxtvCardVehicleFeedbackUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TxtvCardVehicleFeedbackRentalID"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="right"
+                android:text="John Wick"
+                android:textAlignment="gravity"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/textUserName"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Feedback"/>
+
+            <TextView
+                android:id="@+id/TxtvCardVehicleFeedbackComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/textFeedback"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:textSize="18dp"
+                android:text="Very smooth and comfortable. It seems the owner maintain the vehicle perfectly"/>
+
+            <TextView
+                android:id="@+id/textRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/TxtvCardVehicleFeedbackComment"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Rate"/>
+
+            <RatingBar
+                android:id="@+id/TxtvCardVehicleFeedbackRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/textRating"
+                android:layout_marginStart="85dp"
+                android:layout_marginEnd="85dp"
+                android:layout_marginBottom="10dp"
+                android:numStars="5"
+                android:rating="3.5"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

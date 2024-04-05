@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityVehicleDetails"
+    android:fitsSystemWindows="true">
+    <!-- when the click on specific vehicle, this page will be displayed. When user clicks the book now button, a popup box should be appeared to confirm the rent -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/top_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/btn_back"/>
+
+        <TextView
+            android:id="@+id/TxtvVehicleDetailsHeadText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:text="CAX - 2222"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardVehicleImage"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:elevation="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ViewFlipper
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:autoStart="true"
+                    android:flipInterval="2000"
+                    android:inAnimation="@android:anim/slide_in_left"
+                    android:outAnimation="@android:anim/slide_out_right">
+
+                    <ImageView
+                        android:id="@+id/ImgVehicleDetailsFront"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/honda_civic_front"/>
+
+                    <ImageView
+                        android:id="@+id/ImgVehicleDetailsBack"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/honda_civic_rear"/>
+                    <ImageView
+                        android:id="@+id/ImgVehicleDetailsRight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/honda_civic_right"/>
+
+                    <ImageView
+                        android:id="@+id/ImgVehicleDetailsLeft"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/honda_civic_left"/>
+
+                    </ViewFlipper>
+
+                <TextView
+                    android:id="@+id/TxtvVehicleDetailsModelMake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="Honda Civic"/>
+
+                <TextView
+                    android:id="@+id/TxtvVehicleDetailsRegisterNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="CAX - 2222"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CardVehicleDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/cardVehicleImage"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:cardCornerRadius="20dp"
+            android:elevation="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_vehicle_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Vehicle Type"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/TxtvVehicleDetailsType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/text_vehicle_type"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:textSize="18dp"
+                    android:textAlignment="gravity"
+                    android:gravity="right"
+                    android:text="Car"/>
+
+                <TextView
+                    android:id="@+id/text_vehicle_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/text_vehicle_type"
+                    android:layout_marginStart="15dp"
+                    android:text="Year"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/TxtvVehicleDetailsYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/TxtvVehicleDetailsType"
+                    android:layout_toEndOf="@+id/text_vehicle_year"
+                    android:layout_marginEnd="15dp"
+                    android:textSize="18dp"
+                    android:textAlignment="gravity"
+                    android:gravity="right"
+                    android:text="2020"/>
+
+                <TextView
+                    android:id="@+id/text_vehicle_transmission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/text_vehicle_year"
+                    android:layout_marginStart="15dp"
+                    android:text="Transmission Type"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/TxtvVehicleDetailsTransmission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/TxtvVehicleDetailsYear"
+                    android:layout_toEndOf="@+id/text_vehicle_transmission"
+                    android:layout_marginEnd="15dp"
+                    android:textSize="18dp"
+                    android:textAlignment="gravity"
+                    android:gravity="right"
+                    android:text="Auto"/>
+
+                <TextView
+                    android:id="@+id/text_vehicle_fuel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/text_vehicle_transmission"
+                    android:layout_marginStart="15dp"
+                    android:text="Fuel Type"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/TxtvVehicleDetailsFuel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/TxtvVehicleDetailsTransmission"
+                    android:layout_toEndOf="@+id/text_vehicle_fuel"
+                    android:layout_marginEnd="15dp"
+                    android:textSize="18dp"
+                    android:textAlignment="gravity"
+                    android:gravity="right"
+                    android:text="Petrol"/>
+
+                <TextView
+                    android:id="@+id/text_vehicle_owner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/text_vehicle_fuel"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Owner"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/TxtvVehicleDetailsOwner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/TxtvVehicleDetailsFuel"
+                    android:layout_toEndOf="@+id/text_vehicle_owner"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textAlignment="gravity"
+                    android:gravity="right"
+                    android:text="Ismail"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardVehicleDetailsRatingAndFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/CardVehicleDetails"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="20dp"
+            android:elevation="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:text="Rating"/>
+
+                <RatingBar
+                    android:id="@+id/ratingBarVehicleDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textRating"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="70dp"
+                    android:layout_marginEnd="70dp"
+                    android:rating="0"
+                    android:isIndicator="true"/>
+
+                <TextView
+                    android:id="@+id/TxtvVehicleDetailsSeeAllFeedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/ratingBarVehicleDetails"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textColor="#6987F1"
+                    android:text="See All Feedbacks"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/titleRentThisVehicle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/cardVehicleDetailsRatingAndFeedback"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="25dp"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:text="Rent this vehicle now!"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardVehicleDetailsRentalDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="20dp"
+            android:elevation="15dp"
+            android:layout_below="@+id/titleRentThisVehicle">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/text_start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:text="Starting Date"/>
+
+                <TextView
+                    android:id="@+id/TxtvVehicleDetailsRentStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="18dp"
+                    android:textAlignment="gravity"
+                    android:gravity="right"
+                    android:text="YYY - MM - DD"/>
+
+                <TextView
+                    android:id="@+id/text_return_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/text_start_date"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:text="Return Date"/>
+
+                <TextView
+                    android:id="@+id/TxtvVehicleDetailsRentEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_below="@+id/TxtvVehicleDetailsRentStart"
+                    android:textSize="18dp"
+                    android:textAlignment="gravity"
+                    android:gravity="right"
+                    android:text="YYY - MM - DD"/>
+
+                <TextView
+                    android:id="@+id/text_total_fair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/TxtvVehicleDetailsRentEnd"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:text="Total Fair"/>
+
+                <TextView
+                    android:id="@+id/TxtvVehicleDetailsRentTotalFair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/TxtvVehicleDetailsRentEnd"
+                    android:layout_marginEnd="15dp"
+                    android:textSize="18dp"
+                    android:text="000.00 LKR"/>
+
+                <TextView
+                    android:id="@+id/text_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/text_total_fair"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:text="Discount"/>
+
+                <TextView
+                    android:id="@+id/TxtvVehicleDetailsRentDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/TxtvVehicleDetailsRentTotalFair"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:text="2,000 lkr"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/BtnVehicleDetailsBookNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:layout_below="@+id/cardVehicleDetailsRentalDetails"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            android:textSize="18dp"
+            app:iconTint="#6987F1"
+            android:backgroundTint="#6987F1"
+            android:text="Book Now"/>
+
+    </RelativeLayout>
+
+</ScrollView>

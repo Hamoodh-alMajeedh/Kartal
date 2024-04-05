@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityVehicleRegister"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/registerHeading"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="75dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginTop="75dp"
+            android:text="REGISTER YOUR VEHICLE TO KARTAL"
+            android:textAlignment="center"
+            android:textColor="#0077D6"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textVehicleType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_below="@+id/registerHeading"
+            android:layout_marginTop="25dp"
+            android:textSize="18dp"
+            android:text="Vehicle Type:"/>
+
+        <Spinner
+            android:id="@+id/dropdownVehicleType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@+id/registerHeading"
+            android:layout_marginTop="25dp"/>
+
+        <EditText
+            android:id="@+id/EdtxtVehicleRegisterRegisterNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@+id/textVehicleType"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:hint="Registration No."/>
+
+        <EditText
+            android:id="@+id/EdtxtVehicleRegisterModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@+id/EdtxtVehicleRegisterRegisterNumber"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:hint="Model"/>
+
+        <EditText
+            android:id="@+id/EdtxtVehicleRegisterMake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@+id/EdtxtVehicleRegisterModel"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:hint="Make (Company)"/>
+
+        <EditText
+            android:id="@+id/EdtxtVehicleRegisterYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@+id/EdtxtVehicleRegisterMake"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:hint="Year"/>
+
+        <TextView
+            android:id="@+id/textVehicleTransmissionType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/EdtxtVehicleRegisterYear"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:text="Transmission Type:"/>
+
+        <Spinner
+            android:id="@+id/dropdownTransmissionType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/EdtxtVehicleRegisterYear"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"/>
+
+        <TextView
+            android:id="@+id/textVehicleFuelType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textVehicleTransmissionType"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:text="Emission Type:"/>
+
+        <Spinner
+            android:id="@+id/dropdownEmissionType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/dropdownTransmissionType"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"/>
+
+        <TextView
+            android:id="@+id/textAddvehiclePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textVehicleFuelType"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:text="Add clear pictures of your vehicle"/>
+
+        <ImageView
+            android:id="@+id/ImgVehicleRegisterVehicleFront"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/textAddvehiclePic"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/insert_vehicle_pic_icon"/>
+
+        <TextView
+            android:id="@+id/textVehiclePicFront"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ImgVehicleRegisterVehicleFront"
+            android:layout_below="@+id/ImgVehicleRegisterVehicleFront"
+            android:layout_alignEnd="@+id/ImgVehicleRegisterVehicleFront"
+            android:layout_marginTop="5dp"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:text="Front View"/>
+
+        <ImageView
+            android:id="@+id/ImgVehicleRegisterVehicleBack"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/textAddvehiclePic"
+            android:layout_toEndOf="@+id/ImgVehicleRegisterVehicleFront"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/insert_vehicle_pic_icon"/>
+
+        <TextView
+            android:id="@+id/textVehiclePicBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ImgVehicleRegisterVehicleBack"
+            android:layout_below="@+id/ImgVehicleRegisterVehicleBack"
+            android:layout_alignEnd="@+id/ImgVehicleRegisterVehicleBack"
+            android:layout_marginTop="5dp"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:text="Rear View"/>
+
+        <ImageView
+            android:id="@+id/ImgVehicleRegisterVehicleRight"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/textAddvehiclePic"
+            android:layout_toEndOf="@+id/ImgVehicleRegisterVehicleBack"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/insert_vehicle_pic_icon"/>
+
+        <TextView
+            android:id="@+id/textVehiclePicRightSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ImgVehicleRegisterVehicleRight"
+            android:layout_below="@+id/ImgVehicleRegisterVehicleRight"
+            android:layout_alignEnd="@+id/ImgVehicleRegisterVehicleRight"
+            android:layout_marginTop="5dp"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:text="Right Side"/>
+
+        <ImageView
+            android:id="@+id/ImgVehicleRegisterVehicleLeft"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_below="@+id/textAddvehiclePic"
+            android:layout_toEndOf="@+id/ImgVehicleRegisterVehicleRight"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/insert_vehicle_pic_icon"/>
+
+        <TextView
+            android:id="@+id/textVehiclePicLeftSide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/ImgVehicleRegisterVehicleLeft"
+            android:layout_below="@+id/ImgVehicleRegisterVehicleLeft"
+            android:layout_alignEnd="@+id/ImgVehicleRegisterVehicleLeft"
+            android:layout_marginTop="5dp"
+            android:textSize="16dp"
+            android:textAlignment="center"
+            android:text="Left Side"/>
+
+        <TextView
+            android:id="@+id/textAddLicensePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="30dp"
+            android:layout_below="@+id/textVehiclePicFront"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:text="Add a picture of your license"/>
+
+        <ImageView
+            android:id="@+id/ImgVehicleRegisterVehicleLicense"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textAddLicensePic"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/insert_license_pic"/>
+
+        <TextView
+            android:id="@+id/textAddInsurancePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/ImgVehicleRegisterVehicleLicense"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:textSize="18dp"
+            android:text="Add a picture of vehicle insurance"/>
+
+        <ImageView
+            android:id="@+id/ImgVehicleRegisterVehicleInsurance"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textAddInsurancePic"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/insert_license_pic"/>
+
+        <CheckBox
+            android:id="@+id/CbxVehicleRegisterTerms"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/ImgVehicleRegisterVehicleInsurance"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="18dp"
+            android:text="I accept the terms and conditions"/>
+
+        <TextView
+            android:id="@+id/TextVehicleRegisterTerms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/CbxVehicleRegisterTerms"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:textSize="18dp"
+            android:textColor="#0077D6"
+            android:textAlignment="center"
+            android:text="Read Terms and Conditions"/>
+
+        <Button
+            android:id="@+id/BtnVehicleRegisterSubmit"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/TextVehicleRegisterTerms"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="#6987F1"
+            android:text="Submit"
+            android:textSize="18sp"
+            app:iconTint="#6987F1" />
+
+    </RelativeLayout>
+
+</ScrollView>

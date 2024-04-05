@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    tools:context=".ActivityMyProfile"
+    android:fitsSystemWindows="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <View
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/top_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/btn_back"/>
+
+    <TextView
+        android:id="@+id/title_terms_and_conditions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/back_button"
+        android:text="My Profile"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardUserProfile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="50dp"
+        android:elevation="25dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/top_bar"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/ImgProfileProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ismail"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardUserName"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/top_bar"
+        android:layout_toEndOf="@+id/cardUserProfile"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        app:cardCornerRadius="35dp"
+        android:elevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/TxtProfileUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="25dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="mhd_ismail9653"/>
+
+            <TextView
+                android:id="@+id/TxtProfilePhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/TxtProfileUsername"
+                android:layout_marginStart="25dp"
+                android:textSize="16dp"
+                android:text="+94 76 395 9511"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardUserDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/cardUserProfile"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="50dp"
+        android:elevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="25dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="First Name"/>
+
+            <TextView
+                android:id="@+id/TxtProfileFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="25dp"
+                android:textSize="16dp"
+                android:text="Mohamed"/>
+
+            <TextView
+                android:id="@+id/textLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textFirstName"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Last name"/>
+
+            <TextView
+                android:id="@+id/TxtProfileLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TxtProfileFirstName"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:text="Ismail"/>
+
+            <TextView
+                android:id="@+id/textEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textLastName"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Email"/>
+
+            <TextView
+                android:id="@+id/TxtProfileEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TxtProfileLastName"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:text="mhdismail@gmail.com"/>
+
+            <TextView
+                android:id="@+id/textDateOfBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textEmail"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Date of Birth"/>
+
+            <TextView
+                android:id="@+id/TxtProfileDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TxtProfileEmail"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:text="26 February 2024" />
+
+            <TextView
+                android:id="@+id/textGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textDateOfBirth"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Gender"/>
+
+            <TextView
+                android:id="@+id/TxtProfileGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TxtProfileDob"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:text="trans...." />
+
+            <TextView
+                android:id="@+id/textAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textGender"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Address"/>
+
+            <TextView
+                android:id="@+id/TxtProfileAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TxtProfileGender"
+                android:layout_toEndOf="@+id/textAddress"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="25dp"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:textSize="16dp"
+                android:text="337/56, Ganjawatta, Beruwala, Sri Lanka" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/cardUserDetails"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        app:cardCornerRadius="50dp"
+        android:elevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="25dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:text="Rating"/>
+
+            <RatingBar
+                android:id="@+id/RatingProfileRatingbsr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textRating"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"/>
+
+            <TextView
+                android:id="@+id/TxtProfileMoreFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/RatingProfileRatingbsr"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="16dp"
+                android:textColor="#0027FF"
+                android:text="See All Feedbacks"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardProfileAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/cardRating"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        app:cardCornerRadius="50dp"
+        android:elevation="15dp">
+
+        <RelativeLayout
+            android:id="@+id/RelativeProfileAccountSettings"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iconAccountSettings"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/account_settings_icon"/>
+
+            <TextView
+                android:id="@+id/textAccountSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/iconAccountSettings"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="25dp"
+                android:textSize="18dp"
+                android:text="Update Account"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardProfileDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/CardProfileAccount"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        app:cardCornerRadius="50dp"
+        android:elevation="15dp">
+
+        <RelativeLayout
+            android:id="@+id/RelativeProfileDelete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iconDelete"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/logout_icon"/>
+
+            <TextView
+                android:id="@+id/textDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/iconDelete"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="25dp"
+                android:textSize="18dp"
+                android:text="Delete Account"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardProfileLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/CardProfileDelete"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="25dp"
+        app:cardCornerRadius="50dp"
+        android:elevation="15dp">
+
+        <RelativeLayout
+            android:id="@+id/RelativeProfileLogout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iconLogout"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/logout_icon"/>
+
+            <TextView
+                android:id="@+id/textLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/iconLogout"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="25dp"
+                android:textSize="18dp"
+                android:text="Logout"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+</ScrollView>

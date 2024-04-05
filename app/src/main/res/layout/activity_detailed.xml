@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityDetailedActivity"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#FF5555"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/btn_back"/>
+
+    <TextView
+        android:id="@+id/TextvActivityDetailedStatusTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/back_button"
+        android:text="Rent ID xxxxxx"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardVehicleDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/top_bar"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ImgActivityDetailedVehicleimg"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/img_vehicle"/>
+
+            <TextView
+                android:id="@+id/TextActivityDetailedVehicleNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/ImgActivityDetailedVehicleimg"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:text="xxx - xxxx" />
+
+            <!-- Vehicle Type - Bike/Tuktuk/Car/Van -->
+
+            <TextView
+                android:id="@+id/TextActivityDetailedVehicleType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TextActivityDetailedVehicleNumber"
+                android:layout_toEndOf="@+id/ImgActivityDetailedVehicleimg"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:text="Vehicle Type" />
+
+            <!-- Vehicle Model - Prius/Allion/Carina -->
+
+            <TextView
+                android:id="@+id/TextActivityDetailedVehicleModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TextActivityDetailedVehicleType"
+                android:layout_toEndOf="@+id/ImgActivityDetailedVehicleimg"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:text="Model" />
+
+            <!-- Vehicle Make - Honda/Yamaha/Benz -->
+
+            <TextView
+                android:id="@+id/TextActivityDetailedVehicleMake"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TextActivityDetailedVehicleModel"
+                android:layout_toEndOf="@+id/ImgActivityDetailedVehicleimg"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:text="Make" />
+
+            <!-- Transmission - Auto/Manual/Kryptonic -->
+
+            <TextView
+                android:id="@+id/TextActivityDetailedVehicleTransmission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TextActivityDetailedVehicleMake"
+                android:layout_toEndOf="@+id/ImgActivityDetailedVehicleimg"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:text="Transmission Type" />
+
+            <!-- Fuel Type - Petrol/Diesel/Electric -->
+
+            <TextView
+                android:id="@+id/TextActivityDetailedVehicleFuel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TextActivityDetailedVehicleTransmission"
+                android:layout_toEndOf="@+id/ImgActivityDetailedVehicleimg"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:text="Fuel Type" />
+
+            <!-- Transmission - Auto/Manual/Kryptonic -->
+
+            <TextView
+                android:id="@+id/TextActivityDetailedVehicleOwner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TextActivityDetailedVehicleFuel"
+                android:layout_toEndOf="@+id/ImgActivityDetailedVehicleimg"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="18dp"
+                android:text="Owner: Name" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardRentalDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/CardVehicleDetails"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textRentalDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="Rental Date"/>
+
+            <TextView
+                android:id="@+id/TxtvActivityDetailedRentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/textRentalDate"
+                android:text="dd month yyyy"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textCancelDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textRentalDate"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="Cancelled Date"/>
+
+            <TextView
+                android:id="@+id/TxtvActivityDetailedCancelDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/textRentalDate"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/textCancelDate"
+                android:text="dd month yyyy"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textDistence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textCancelDate"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="Cancelled Date"/>
+
+            <TextView
+                android:id="@+id/TxtvActivityDetailedDistence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TxtvActivityDetailedCancelDate"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/textCancelDate"
+                android:text="dd month yyyy"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textTotalFair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textDistence"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="Total Fair"/>
+
+            <TextView
+                android:id="@+id/TxtvActivityDetailedFair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/TxtvActivityDetailedDistence"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@+id/textTotalFair"
+                android:text="00,000 lkr"
+                android:textAlignment="gravity"
+                android:gravity="right"
+                android:textSize="18dp" />
+
+
+            <!-- Total fair and refund amounts will only be added if user cancelled the rent in the middle of the trip -->
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardRatings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/CardRentalDetails"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text="Rate"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/textRating"
+                android:layout_marginStart="65dp"
+                android:layout_marginEnd="65dp"
+                android:layout_marginBottom="10dp"
+                android:numStars="5"
+                android:rating="2"/>
+
+
+
+            <!-- The above rating bar only displays how much the user rate that specific rent -->
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CardRatings"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CardActivityDetailedCancelFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/CardRentalDetails"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/TextCardActivityCancelTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:text="Cancel Reason"/>
+
+                <TextView
+                    android:id="@+id/TextCardActivityCancelDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/TextCardActivityCancelTitle"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="18dp"
+                    android:text="Description"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/BtnActivityDetailedCancel"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF0000"
+            android:text="Cancel"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:iconTint="#6987F1" />
+
+        <Button
+            android:id="@+id/BtnActivityDetailedStartRide"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF0000"
+            android:text="Start Ride"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:iconTint="#6987F1" />
+
+        <Button
+            android:id="@+id/BtnActivityDetailedEndRide"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF0000"
+            android:text="End Ride"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:iconTint="#6987F1" />
+
+        <Button
+            android:id="@+id/BtnActivityDetailedFeedback"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF0000"
+            android:text="Feedback"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:iconTint="#6987F1" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/BtnActivityDetailedFeedbackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/float_btn_feedback"/>
+
+    <!-- The above floating button helps user to give a feedback (comment and rating) to the vehicle and It'll be displayed to the owner at vehicle feedback page. -->
+    <!-- And also that rating will help to calculate the overall rating for that vehicle -->
+
+</RelativeLayout>
+</ScrollView>

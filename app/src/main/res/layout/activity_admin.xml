@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ActivityAdmin">
+
+    <ImageView
+        android:id="@+id/top_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:src="@drawable/cover"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/logo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="55dp"/>
+
+    <ImageView
+        android:id="@+id/app_name"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:src="@drawable/app_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"/>
+
+    <ImageView
+        android:id="@+id/notification_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/notification"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"/>
+
+    <TextView
+        android:id="@+id/text_dashboard"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/top_bar"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="30dp"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardActivityAdminUsers"
+        android:layout_width="165dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text_dashboard"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textTotalUsers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Total Users"/>
+
+            <TextView
+                android:id="@+id/numberTotalUsers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textTotalUsers"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="124"/>
+
+            <ImageView
+                android:id="@+id/users_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/users_icon"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardActivityAdminBike"
+        android:layout_width="165dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/text_dashboard"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textMotorcycles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Motorcycles"/>
+
+            <TextView
+                android:id="@+id/numberMotorcycles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textMotorcycles"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="47"/>
+
+            <ImageView
+                android:id="@+id/motorcycle_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/bike_icon"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardActivityAdminTuktuk"
+        android:layout_width="165dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cardActivityAdminUsers"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textTuktuks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Tuktuks"/>
+
+            <TextView
+                android:id="@+id/numberTuktuks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textTuktuks"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="30"/>
+
+            <ImageView
+                android:id="@+id/tuktuk_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/tuktuk_icon"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardActivityAdminCar"
+        android:layout_width="165dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/cardActivityAdminBike"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textCars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Cars"/>
+
+            <TextView
+                android:id="@+id/numberCars"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textCars"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="50"/>
+
+            <ImageView
+                android:id="@+id/car_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/cars_icon"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardActivityAdminVan"
+        android:layout_width="165dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/cardActivityAdminTuktuk"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textVans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Vans"/>
+
+            <TextView
+                android:id="@+id/numberVans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textVans"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="22"/>
+
+            <ImageView
+                android:id="@+id/vans_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/van_icon"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardActivityAdminRentals"
+        android:layout_width="165dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/cardActivityAdminCar"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textTotalRentals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Total Rentals"/>
+
+            <TextView
+                android:id="@+id/numberTotalRentals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textTotalRentals"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="15dp"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="374"/>
+
+            <ImageView
+                android:id="@+id/rentals_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/rentals_icon"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

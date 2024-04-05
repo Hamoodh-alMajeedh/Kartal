@@ -5,164 +5,343 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActivityUserRegister"
-    android:padding="30dp"
-    android:orientation="vertical"
-    android:layout_gravity="center"
-    android:gravity="center">
+    android:fitsSystemWindows="true">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:layout_height="wrap_content">
+
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/registerHeading"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="vcxvxc"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="75dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginTop="75dp"
+            android:text="CREATE NEW USER ACCOUNT"
+            android:textAlignment="center"
+            android:textColor="#0077D6"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/imgUserRegisterUserprofile"
-            android:layout_marginTop="20dp"
-            android:layout_width="200dp"
-            android:layout_height="200dp"/>
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/profile_icon"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/registerHeading"
+            android:layout_marginTop="25dp"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="vcxvxc"/>
-
-        <ImageView
-            android:id="@+id/imgUserRegisterDrivingLFront"
-            android:layout_marginTop="20dp"
+            android:id="@+id/add_profile_text"
             android:layout_width="200dp"
-            android:layout_height="200dp"/>
-
-        <ImageView
-            android:id="@+id/imgUserRegisterDrivingLBack"
-            android:layout_marginTop="20dp"
-            android:layout_width="200dp"
-            android:layout_height="200dp"/>
+            android:layout_height="match_parent"
+            android:layout_below="@+id/imgUserRegisterUserprofile"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:text="Add a profile picture"
+            android:textAlignment="center"
+            android:textSize="20dp"/>
 
         <EditText
             android:id="@+id/EdtUserRegisterFirstname"
-            android:layout_width="match_parent"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:hint="First Name"
-            android:elegantTextHeight="true"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/add_profile_text"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/textfields"
+            android:elegantTextHeight="true"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="10dp"
+            android:hint="First Name"/>
 
         <EditText
             android:id="@+id/EdtUserRegisterLastname"
-            android:layout_width="match_parent"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:hint="Last Name"
-            android:elegantTextHeight="true"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/EdtUserRegisterFirstname"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textfields"
+            android:elegantTextHeight="true"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="10dp"
+            android:hint="Last Name"/>
 
         <EditText
             android:id="@+id/EdtUserRegisterPhone"
-            android:layout_width="match_parent"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:hint="Phone"
-            android:elegantTextHeight="true"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/EdtUserRegisterLastname"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textfields"
+            android:elegantTextHeight="true"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="10dp"
+            android:hint="Mobile Number"/>
 
         <EditText
             android:id="@+id/EdtUserRegisterEmail"
-            android:layout_width="match_parent"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:elegantTextHeight="true"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/EdtUserRegisterPhone"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textfields"
+            android:elegantTextHeight="true"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="10dp"
+            android:hint="Email Address"/>
 
         <EditText
             android:id="@+id/EdtUserRegisterAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Address"
-            android:elegantTextHeight="true"/>
+            android:layout_width="325dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/EdtUserRegisterEmail"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textfields"
+            android:elegantTextHeight="true"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="10dp"
+            android:hint="Residential Address"
+            android:gravity="top"/>
 
         <LinearLayout
             android:id="@+id/LinierUserRegisterDob"
-            android:layout_width="match_parent"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date of Birth : "/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/EdtUserRegisterAddress"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textfields"
+            android:orientation="horizontal"
+            android:padding="10dp">
 
             <TextView
-                android:id="@+id/TxvUserRegisterDob"
+                android:id="@+id/TxtvActivityRegisterDob"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint=" YYYY - MM - DD "/>
+                android:hint="Date of Birth"
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/ImgUserRegisterDob"
-                android:layout_gravity="right"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/baseline_calendar_month_24"/>
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="150dp"
+                android:src="@drawable/baseline_calendar_month_24" />
 
         </LinearLayout>
 
         <RadioGroup
             android:id="@+id/radioGroup"
-            android:layout_width="match_parent"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/LinierUserRegisterDob"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
             android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            android:elegantTextHeight="true">
+            android:padding="10dp"
+            tools:layout_editor_absoluteX="45dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Gender      "
-                android:textSize="20sp"/>
-
-            <RadioButton android:id="@+id/RadioUserRegisterMale"
+                android:text="Gender"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+            <RadioButton
+                android:id="@+id/RadioUserRegisterMale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10px"
                 android:text="Male"
-                android:checked="false"
-                android:elegantTextHeight="true"/>
+                android:textSize="18sp"/>
 
             <RadioButton
                 android:id="@+id/RadioUserRegisterFemale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Female"
-                android:checked="false"
-                android:elegantTextHeight="true"/>
+                android:textSize="18sp"/>
         </RadioGroup>
+
+        <TextView
+            android:id="@+id/textLicenseFront"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/radioGroup"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:text="Front side of driving license"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:id="@+id/imgUserRegisterDrivingLFront"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textLicenseFront"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/insert_license_pic"/>
+
+        <TextView
+            android:id="@+id/textLicenseBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/imgUserRegisterDrivingLFront"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:text="Back side of driving license"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:id="@+id/imgUserRegisterDrivingLBack"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textLicenseBack"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/insert_license_pic"/>
 
         <EditText
             android:id="@+id/EdtUserRegisterUsername"
-            android:layout_width="match_parent"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:hint="Username"
-            android:elegantTextHeight="true"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/imgUserRegisterDrivingLBack"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textfields"
+            android:elegantTextHeight="true"
+            android:ems="10"
+            android:inputType="text"
+            android:padding="10dp"
+            android:hint="Username" />
 
         <EditText
             android:id="@+id/EdtUserRegisterPassword"
-            android:layout_width="match_parent"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:elegantTextHeight="true"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/EdtUserRegisterUsername"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textfields"
+            android:elegantTextHeight="true"
+            android:ems="10"
+            android:inputType="text|textPassword"
+            android:padding="10dp"
+            android:hint="Password" />
 
         <EditText
             android:id="@+id/EdtUserRegisterConfirmpassword"
-            android:layout_width="match_parent"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:hint="Confirm Password"
-            android:elegantTextHeight="true"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/EdtUserRegisterPassword"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/textfields"
+            android:elegantTextHeight="true"
+            android:ems="10"
+            android:inputType="text|textPassword"
+            android:padding="10dp"
+            android:hint="Confirm Password" />
 
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/EdtUserRegisterConfirmpassword"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:text="I accept the terms and conditions"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"/>
+
+        <TextView
+            android:id="@+id/terms_conditions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Read Terms and Conditions"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textColor="#0077D6"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/checkbox"
+            android:layout_marginTop="10dp"/>
 
         <Button
             android:id="@+id/BtnUserRegisterRegister"
-            android:layout_width="match_parent"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:hint="register"
-            android:elegantTextHeight="true"/>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/terms_conditions"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#6987F1"
+            android:text="Regiester"
+            android:textSize="20sp"
+            app:iconTint="#6987F1" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </ScrollView>

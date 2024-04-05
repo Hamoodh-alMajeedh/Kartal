@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/BtmHome"
+        android:title="Home"
+        android:icon="@drawable/home_icon"/>
+
+    <item
+        android:id="@+id/BtmActivities"
+        android:title="Activities"
+        android:icon="@drawable/activities_icon"/>
+
+    <item
+        android:id="@+id/BtmVehicle"
+        android:title="Vehicle"
+        android:icon="@drawable/vehicle_icon"/>
+
+    <item
+        android:id="@+id/BtmProfile"
+        android:title="My Profile"
+        android:icon="@drawable/profileicon"/>
+
+</menu>

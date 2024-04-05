@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ongoingCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/TxtvCardVehicleVehicleMake"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Honda"/>
+
+        <TextView
+            android:id="@+id/TxtvCardVehicleVehicleModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/TxtvCardVehicleVehicleMake"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Civic"/>
+
+        <TextView
+            android:id="@+id/TxtvCardVehicleVehicleNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="CAX - 2222"/>
+
+        <TextView
+            android:id="@+id/TxtvCardVehicleFuelType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/TxtvCardVehicleVehicleMake"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:text="Petrol"/>
+
+        <TextView
+            android:id="@+id/TxtvCardVehicleTransmissionType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/TxtvCardVehicleFuelType"
+            android:layout_marginStart="15dp"
+            android:textSize="20dp"
+            android:text="Auto"/>
+
+        <TextView
+            android:id="@+id/TxtvCardVehicleVehicleYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/TxtvCardVehicleTransmissionType"
+            android:layout_marginStart="15dp"
+            android:textSize="20dp"
+            android:text="2020"/>
+
+        <TextView
+            android:id="@+id/TxtvCardVehicleVehicleOwner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/TxtvCardVehicleVehicleYear"
+            android:layout_marginStart="15dp"
+            android:textSize="20dp"
+            android:text="Owner"/>
+
+        <TextView
+            android:id="@+id/TxtvCardVehicleOwnerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TxtvCardVehicleVehicleYear"
+            android:layout_toEndOf="@+id/TxtvCardVehicleVehicleOwner"
+            android:layout_toStartOf="@+id/ImgCardVehicleCarFront"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="20dp"
+            android:text="Thisara Perera"/>
+
+        <ImageView
+            android:id="@+id/ImgCardVehicleCarFront"
+            android:layout_width="175dp"
+            android:layout_height="125dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/TxtvCardVehicleVehicleNumber"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/honda_civic"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
